@@ -1,10 +1,9 @@
 {
-  "nav":{
+  "nav": {
     "about": "À propos",
     "contact": "Contact"
   },
-
-  "hero":{
+  "hero": {
     "title": "Vos outils préférés",
     "parag": "en un seul endroit.",
     "btn": "Commencer",
@@ -12,9 +11,8 @@
     "text_todo": "Une liste de tâches est un outil utilisé pour organiser les tâches qui doivent être terminées",
     "text_note": "Une application de notes est un outil numérique conçu pour vous aider à capturer, organiser et gérer vos notes efficacement."
   },
-
-  "accordion":{
-    "first" : "Comment démarrer avec Risat?",
+  "accordion": {
+    "first": "Comment démarrer avec Risat?",
     "answer1": "Pour commencer, visitez notre site Web. Vous n’avez pas besoin de créer un compte pour utiliser le site.",
     "second": "Quels outils sont disponibles sur Risat ?",
     "answer2": "Risat rassemble divers outils en un seul endroit pour rendre votre flux de travail fluide. Nous offrons plusieurs outils tels que TodoList, Notes et autres.",
@@ -23,19 +21,16 @@
     "fourth": "Risat est-il gratuit ?",
     "answer4": "Risat est totalement gratuit."
   },
-
-  "footer":{
+  "footer": {
     "right": "construite par",
     "lang": "Choisir ta Langue:",
     "default": "Par Défaut"
   },
-
-  "about":{
+  "about": {
     "title": "À propos de",
     "description": "Bienvenue à Risat! Nous sommes dédiés à fournir une expérience transparente en rassemblant tous vos outils préférés en un seul endroit. Que vous écriviez, économisez localement ou exploriez de nouvelles fonctionnalités, risat est là pour rendre vos tâches plus faciles et plus efficaces. Notre mission est de vous donner les meilleurs outils et ressources dans une plateforme pratique."
   },
-
-  "contact":{
+  "contact": {
     "username": "Nom complet",
     "country": "Pays",
     "email": "Email",
@@ -44,8 +39,7 @@
     "success": "Message envoyé avec succès",
     "error": "Quelque chose ne va pas ! Réessayez"
   },
-
-  "dashboard":{
+  "dashboard": {
     "link": "Aller à",
     "list": "Liste de tâches",
     "note": "Notes",
@@ -55,8 +49,7 @@
     "title": "Tableau de bord",
     "deleteAll": "Supprimer tous"
   },
-
-  "TODO":{
+  "TODO": {
     "todo_btn": "Ajouter une Tâche...",
     "toast": "Tâche créée",
     "toast_edit": "Tâche modifiée",
@@ -64,9 +57,9 @@
     "toast_delete": "Tâche supprimée",
     "allTodos": "Tous les Tâches de cette liste ont été supprimés",
     "no_todo": "Pas de Todos ici !",
-    "create": "créer todo"
+    "create": "créer todo",
+    "day": "Hier"
   },
-
   "Note": {
     "note_title": "Ajouter le titre du Note...",
     "note_desc": "Ajouter la description du Note...",
@@ -78,8 +71,7 @@
     "no_note": "Pas de Notes ici !",
     "create": "créer note"
   },
-
-  "password":{
+  "password": {
     "btn": "générer mot de passe",
     "copy": "copier",
     "length": "longueur",
@@ -91,8 +83,7 @@
     "error": "rien à copier",
     "less": "inférieur ou égal à 16"
   },
-
-  "expense":{
+  "expense": {
     "transaction": "Ajouter un élement",
     "description": "Description"
   }

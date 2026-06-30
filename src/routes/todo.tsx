@@ -57,7 +57,7 @@ function Todo() {
       </header>
 
       <main className="bg-white dark:bg-black-500">
-        <section className="mx-auto w-full max-w-xl px-4 pt-10">
+        <section className="mx-auto w-full max-w-xl px-4 pt-6">
           {show && <TodoForm showForm={showForm} />}
           <button
             type="button"

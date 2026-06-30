@@ -16,6 +16,7 @@ const TodoForm = ({ showForm }: { showForm: () => void }) => {
       checked: false,
       id: crypto.randomUUID(),
       time: Date.now(),
+      createdAt: new Date().toISOString(),
     });
     setTodo("");
     showForm();

@@ -1,9 +1,9 @@
 {
-  "nav":{
+  "nav": {
     "about": "About",
     "contact": "Contact"
   },
-  "hero":{
+  "hero": {
     "title": "Your favourite tools",
     "parag": "in one place.",
     "btn": "Get Started",
@@ -11,9 +11,8 @@
     "text_todo": "A TODO list is a tool used to organize tasks that need to be complete",
     "text_note": "A note app is a digital tool designed to help you capture, organize, and manage your notes efficiently."
   },
-
-  "accordion":{
-    "first" : "How do I get started with Risat?",
+  "accordion": {
+    "first": "How do I get started with Risat?",
     "answer1": "To get started, visit our website. You don't need to create an account to use the website.",
     "second": "What tools are available on Risat?",
     "answer2": "Risat brings together various tools in one place to make your workflow seamless. We offer several tools such as TodoList, Notes, and others.",
@@ -22,19 +21,16 @@
     "fourth": "Is Risat free to use?",
     "answer4": "Risat is totally free."
   },
-
-  "footer":{
+  "footer": {
     "right": "Build by",
     "lang": "Select your Language",
     "default": "By Default"
   },
-
-  "about":{
+  "about": {
     "title": "About",
     "description": "Welcome to Risat! We are dedicated to providing a seamless experience by bringing all your favourite tools into one place. Whether you’re writing, saving locally, or exploring new features, risat is here to make your tasks easier and more efficient. Our mission is to empower you with the best tools and resources in one convenient platform."
   },
-
-  "contact":{
+  "contact": {
     "username": "Full Name",
     "country": "Country",
     "email": "Email",
@@ -43,8 +39,7 @@
     "success": "Message sent successfully",
     "error": "Something wrong! Try again"
   },
-
-  "dashboard":{
+  "dashboard": {
     "link": "Go to",
     "list": "TODO List",
     "note": "Notes",
@@ -54,19 +49,18 @@
     "title": "Dashboard",
     "deleteAll": "Delete All"
   },
-
-  "TODO":{
+  "TODO": {
     "todo_btn": "Enter a Todo...",
-    "delete_btn":"Delete",
+    "delete_btn": "Delete",
     "toast": "Todo Created",
     "toast_edit": "Todo Edited",
     "todo_modify": "Edit Todo...",
     "toast_delete": "Todo Deleted",
     "allTodos": "All the Todos in this list has been deleted",
     "no_todo": "No Todos here!",
-    "create": "create todo"
+    "create": "create todo",
+    "day": "Yesterday"
   },
-
   "Note": {
     "note_title": "Add Note Title",
     "note_desc": "Add Note Description...",
@@ -78,8 +72,7 @@
     "no_note": "No Notes here!",
     "create": "create note"
   },
-
-  "password":{
+  "password": {
     "btn": "generate password",
     "copy": "copy",
     "length": "length",
@@ -91,8 +84,7 @@
     "error": "nothing to copy",
     "less": "less or equal to 16"
   },
-
-  "expense":{
+  "expense": {
     "transaction": "Add an item",
     "description": "Description"
   }

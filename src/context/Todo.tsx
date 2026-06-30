@@ -13,6 +13,7 @@ export type TaskType = {
   id: string;
   checked: boolean;
   time: number;
+  createdAt: string;
 };
 
 interface TodoTypes {

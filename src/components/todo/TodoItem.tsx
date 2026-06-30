@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { TaskType, TodoContext } from "../../context/Todo";
 
 const TodoItem = ({ task }: { task: TaskType }) => {
@@ -11,37 +12,72 @@ const TodoItem = ({ task }: { task: TaskType }) => {
     updateText(task.id);
   };
 
-  return (
-    <li className="mx-auto flex w-full max-w-lg animate-fadeIn items-center justify-between rounded px-2 py-1.5 font-medium shadow-dark dark:shadow-lightWhite">
-      <label
-        htmlFor={task.id}
-        className={`flex cursor-pointer items-center gap-2 text-xs ${done ? "text-neutral-500 line-through dark:text-neutral-400" : ""}`}
-      >
-        <input
-          type="checkbox"
-          onChange={isComplete}
-          name={task.name}
-          id={task.id}
-          className="peer hidden"
-        />
-        <div className="light:bg-[#e8e8e8] flex size-4 rounded-md border border-[#a2a1a833] transition peer-checked:bg-[#7152f3] dark:bg-[#212121]">
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            className="light:stroke-[#e8e8e8] size-4 dark:stroke-[#212121]"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 12.6111L8.92308 17.5L20 6.5"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-        </div>
+  const { t } = useTranslation("global");
 
-        {task.name}
-      </label>
+  const formatRelativeDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+
+    // Check if it's today
+    if (
+      date.getDate() === today.getDate() &&
+      date.getMonth() === today.getMonth() &&
+      date.getFullYear() === today.getFullYear()
+    ) {
+      const hours = String(date.getHours()).padStart(2, "0");
+      const minutes = String(date.getMinutes()).padStart(2, "0");
+      return `${hours}:${minutes}`;
+    }
+
+    // Check if it's yesterday
+    if (
+      date.getDate() === yesterday.getDate() &&
+      date.getMonth() === yesterday.getMonth() &&
+      date.getFullYear() === yesterday.getFullYear()
+    ) {
+      return `${t("TODO.day")}`;
+    }
+    return date.toLocaleDateString();
+  };
+
+  return (
+    <li className="mx-auto flex w-full max-w-lg animate-fadeIn items-end justify-between border-b px-2 py-1.5 pb-2 font-medium">
+      <div className="space-y-1">
+        <span className="text-xs text-neutral-600 dark:text-neutral-400">
+          {formatRelativeDate(task.createdAt)}
+        </span>
+        <label
+          htmlFor={task.id}
+          className={`flex cursor-pointer items-center gap-2 text-sm ${done ? "text-neutral-500 line-through dark:text-neutral-400" : ""}`}
+        >
+          <input
+            type="checkbox"
+            onChange={isComplete}
+            name={task.name}
+            id={task.id}
+            className="peer hidden"
+          />
+          <div className="flex size-4 rounded-md border border-[#a2a1a833] bg-[#e8e8e8] transition peer-checked:bg-[#7152f3] dark:bg-[#212121]">
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              className="size-4 stroke-[#e8e8e8] dark:stroke-[#212121]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12.6111L8.92308 17.5L20 6.5"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          </div>
+
+          {task.name}
+        </label>
+      </div>
       <div className="flex items-center gap-2 text-light">
         <button
           type="button"
@@ -54,7 +90,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={2}
+            strokeWidth={2.5}
             stroke="currentColor"
             className="size-4"
           >
@@ -76,7 +112,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={2}
+            strokeWidth={2.5}
             stroke="currentColor"
             className="size-4"
           >
