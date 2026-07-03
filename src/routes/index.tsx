@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import Dashbord from "../components/Dashboard";
 import Footer from "../components/Footer";
-import Home from "../components/Home";
 import Navbar from "../components/Navbar";
 
 export const Route = createFileRoute("/")({
@@ -16,7 +16,7 @@ function HomeRoute() {
       <Navbar />
 
       {/* hero */}
-      <Home />
+      <Dashbord />
 
       {/* footer */}
       <Footer />
