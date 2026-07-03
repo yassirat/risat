@@ -25,7 +25,7 @@ const FooterLang = () => {
     <div className="relative">
       <button
         type="button"
-        className={`flex animate-fadeIn items-center gap-1 rounded bg-light px-1 py-1 text-xs font-medium italic transition-all duration-300 ease-in-out hover:bg-slate-200`}
+        className={`flex animate-fadeIn items-center gap-1 rounded px-1 py-1 text-xs font-medium italic transition-all duration-300 ease-in-out`}
         title={t("footer.lang")}
         ref={buttonRef}
         onClick={() => handleClickOutside()}
@@ -37,7 +37,7 @@ const FooterLang = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className="lucide lucide-languages"
@@ -54,7 +54,7 @@ const FooterLang = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          strokeWidth={2}
+          strokeWidth={2.5}
           stroke="currentColor"
           className={`size-3 transition-all duration-300 ease-in-out ${hover ? "rotate-180" : ""}`}
         >
@@ -70,7 +70,7 @@ const FooterLang = () => {
         {hover && (
           <motion.div
             ref={menuRef}
-            className="absolute bottom-10 right-0 z-10 grid origin-bottom-right place-content-center gap-4 rounded bg-white/95 p-5 text-black shadow-dark backdrop-blur dark:shadow-lightWhite"
+            className="absolute right-0 top-10 z-10 grid origin-top-right place-content-center gap-4 rounded bg-neutral-200/75 p-4 text-black shadow-dark backdrop-blur dark:shadow-lightWhite"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}

@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import FooterLang from "./FooterLang";
 
 const Footer = () => {
   const { t } = useTranslation("global");
@@ -19,7 +18,9 @@ const Footer = () => {
           </a>
           {""} &copy; {new Date().getFullYear()}
         </p>
-        <FooterLang />
+        <p className="text-xs font-medium tracking-wide text-light">
+          {t("footer.data")}
+        </p>
       </div>
     </footer>
   );
