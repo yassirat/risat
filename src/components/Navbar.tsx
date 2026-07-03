@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import FooterLang from "./FooterLang";
 import { SunBtn } from "./ui/Sun";
 
 const Navbar = () => {
@@ -31,19 +32,14 @@ const Navbar = () => {
             Risat.
           </Link>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-4">
           <Link
             to="/about"
             className="rounded-2xl px-3 py-1 text-xs font-medium tracking-wide transition-colors duration-300 ease-in-out hover:bg-black-500 hover:text-light dark:hover:bg-light dark:hover:text-black-500 md:text-sm [&.active]:bg-black-500 [&.active]:text-light dark:[&.active]:bg-light dark:[&.active]:text-black"
           >
             {t("nav.about")}
           </Link>
-          <Link
-            to="/contact"
-            className="mr-4 rounded-2xl px-3 py-1 text-xs font-medium tracking-wide transition-colors duration-300 ease-in-out hover:bg-black-500 hover:text-light dark:hover:bg-light dark:hover:text-black-500 md:mr-5 md:text-sm [&.active]:bg-black-500 [&.active]:text-light dark:[&.active]:bg-light dark:[&.active]:text-black"
-          >
-            {t("nav.contact")}
-          </Link>
+          <FooterLang />
           <SunBtn />
         </div>
       </nav>
