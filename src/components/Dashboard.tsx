@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import expenseImg from "../assets/img/expense.png";
 import noteImg from "../assets/img/notes.jpg";
 import passImg from "../assets/img/pass.jpg";
 import todoImg from "../assets/img/todo.jpg";
@@ -23,12 +22,6 @@ const Dashbord = () => {
     },
     {
       id: 3,
-      title: `${t("dashboard.expense")}`,
-      href: "/expense",
-      img: expenseImg,
-    },
-    {
-      id: 4,
       title: `${t("dashboard.pass")}`,
       href: "/pass-generate",
       img: passImg,
