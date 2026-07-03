@@ -24,11 +24,12 @@
   "footer": {
     "right": "construite par",
     "lang": "Choisir ta Langue:",
-    "default": "Par Défaut"
+    "default": "Par Défaut",
+    "data": "Toutes les données enregistrées localement dans votre navigateur"
   },
   "about": {
     "title": "À propos de",
-    "description": "Bienvenue à Risat! Nous sommes dédiés à fournir une expérience transparente en rassemblant tous vos outils préférés en un seul endroit. Que vous écriviez, économisez localement ou exploriez de nouvelles fonctionnalités, risat est là pour rendre vos tâches plus faciles et plus efficaces. Notre mission est de vous donner les meilleurs outils et ressources dans une plateforme pratique."
+    "description": "Bienvenue à Risat! une platforme dédiés à fournir une expérience transparente en rassemblant tous vos outils préférés en un seul endroit. Que vous écriviez, économisez localement ou exploriez de nouvelles fonctionnalités, risat est là pour rendre vos tâches plus faciles et plus efficaces."
   },
   "contact": {
     "username": "Nom complet",

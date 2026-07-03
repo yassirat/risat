@@ -24,11 +24,12 @@
   "footer": {
     "right": "Build by",
     "lang": "Select your Language",
-    "default": "By Default"
+    "default": "By Default",
+    "data": "All data saved locally in your browser"
   },
   "about": {
     "title": "About",
-    "description": "Welcome to Risat! We are dedicated to providing a seamless experience by bringing all your favourite tools into one place. Whether you’re writing, saving locally, or exploring new features, risat is here to make your tasks easier and more efficient. Our mission is to empower you with the best tools and resources in one convenient platform."
+    "description": "Welcome to Risat! A platform dedicated to providing a seamless experience by bringing all your favourite tools into one place. Whether you’re writing, saving locally, or exploring new features, risat is here to make your tasks easier and more efficient."
   },
   "contact": {
     "username": "Full Name",
