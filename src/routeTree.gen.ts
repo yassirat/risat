@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TodoRouteImport } from './routes/todo'
 import { Route as PassGenerateRouteImport } from './routes/pass-generate'
 import { Route as ExpenseRouteImport } from './routes/expense'
-import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,11 +31,6 @@ const PassGenerateRoute = PassGenerateRouteImport.update({
 const ExpenseRoute = ExpenseRouteImport.update({
   id: '/expense',
   path: '/expense',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DashboardRoute = DashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -69,7 +63,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/dashboard': typeof DashboardRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
   '/todo': typeof TodoRoute
@@ -80,7 +73,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/dashboard': typeof DashboardRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
   '/todo': typeof TodoRoute
@@ -92,7 +84,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/dashboard': typeof DashboardRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
   '/todo': typeof TodoRoute
@@ -105,7 +96,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/dashboard'
     | '/expense'
     | '/pass-generate'
     | '/todo'
@@ -116,7 +106,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/dashboard'
     | '/expense'
     | '/pass-generate'
     | '/todo'
@@ -127,7 +116,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/dashboard'
     | '/expense'
     | '/pass-generate'
     | '/todo'
@@ -139,7 +127,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  DashboardRoute: typeof DashboardRoute
   ExpenseRoute: typeof ExpenseRoute
   PassGenerateRoute: typeof PassGenerateRoute
   TodoRoute: typeof TodoRoute
@@ -168,13 +155,6 @@ declare module '@tanstack/react-router' {
       path: '/expense'
       fullPath: '/expense'
       preLoaderRoute: typeof ExpenseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -219,7 +199,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  DashboardRoute: DashboardRoute,
   ExpenseRoute: ExpenseRoute,
   PassGenerateRoute: PassGenerateRoute,
   TodoRoute: TodoRoute,

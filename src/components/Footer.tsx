@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#30475e] px-6 py-3">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-2">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 md:flex-row">
         <p className="text-xs font-medium tracking-wide text-light">
           {t("footer.right")}{" "}
           <a
@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
           {""} &copy; {new Date().getFullYear()}
         </p>
-        <p className="text-xs font-medium tracking-wide text-light">
+        <p className="text-center text-xs font-medium tracking-wide text-light">
           {t("footer.data")}
         </p>
       </div>

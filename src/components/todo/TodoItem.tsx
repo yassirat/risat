@@ -43,7 +43,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
   };
 
   return (
-    <li className="mx-auto flex w-full max-w-lg animate-fadeIn items-end justify-between border-b px-2 py-1.5 pb-2 font-medium">
+    <li className="mx-auto flex w-full max-w-lg animate-fadeIn items-end justify-between border-b p-2 font-medium">
       <div className="space-y-1">
         <span className="text-xs text-neutral-600 dark:text-neutral-400">
           {formatRelativeDate(task.createdAt)}

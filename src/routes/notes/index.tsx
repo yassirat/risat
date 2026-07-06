@@ -26,7 +26,7 @@ function Notes() {
       {/* Navbar */}
       <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 px-4 py-4 text-light">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
-          <Link to="/dashboard" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -55,30 +55,36 @@ function Notes() {
         </nav>
       </header>
 
-      <main className="bg-white dark:bg-zinc-950">
-        <section className="mx-auto w-full max-w-3xl px-4 pt-10">
+      <main className="dark:bg-zinc-950">
+        <section className="mx-auto w-full max-w-2xl px-4 pt-6">
           {show && <NoteForm showForm={showForm} />}
-          <button
-            type="button"
-            title={t("Note.create")}
-            aria-label={t("Note.create")}
-            className="fixed bottom-10 right-8 rounded-full bg-yellow-600 p-1 text-light transition-colors duration-300 hover:bg-yellow-500"
-            onClick={showForm}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-plus-icon lucide-plus size-7"
-            >
-              <path d="M5 12h14" />
-              <path d="M12 5v14" />
-            </svg>
-          </button>
+          <div className="pointer-events-none fixed bottom-12 left-0 right-0 flex justify-center">
+            <div className="pointer-events-auto flex w-full max-w-xl justify-end pr-6">
+              <button
+                type="button"
+                title={t("TODO.create")}
+                aria-label={t("TODO.create")}
+                className="rounded-full bg-yellow-600 p-1 text-light transition-colors duration-300 hover:bg-yellow-500"
+                onClick={showForm}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14" />
+                  <path d="M12 5v14" />
+                </svg>
+              </button>
+            </div>
+          </div>
           {notes.length != 0 ? (
             <>
               <button

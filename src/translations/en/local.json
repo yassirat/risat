@@ -42,7 +42,7 @@
   },
   "dashboard": {
     "link": "Go to",
-    "list": "TODO List",
+    "list": "Todo List",
     "note": "Notes",
     "expense": "Grocery List",
     "pass": "Password Generator",

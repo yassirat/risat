@@ -4,7 +4,7 @@ import { NoteProps } from "../../context/Note";
 const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
   return (
     <Link
-      className="mx-auto flex w-full max-w-lg animate-fadeIn items-center justify-between border-b pb-2"
+      className="mx-auto w-full max-w-lg animate-fadeIn border-b border-zinc-200 p-2"
       key={takeNote.id}
       to="/notes/$id"
       params={{ id: takeNote.id }}
@@ -13,15 +13,19 @@ const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
         <h4 className="text-sm font-semibold first-letter:capitalize">
           {takeNote.title}
         </h4>
-        <p className="text-xs font-medium text-gray-500 dark:text-gray-500">
-          {takeNote.updatedAt
-            ? new Date(takeNote.updatedAt).toLocaleDateString()
-            : new Date(takeNote.createdAt).toLocaleDateString()}
+        <div className="flex items-center gap-1 text-xs font-medium text-gray-600 dark:text-gray-400">
+          <span>
+            {takeNote.updatedAt
+              ? new Date(takeNote.updatedAt).toLocaleDateString()
+              : new Date(takeNote.createdAt).toLocaleDateString()}
+          </span>
           <span> </span>
-          {takeNote.desc.length > 20
-            ? `${takeNote.desc.slice(0, 20)}...`
-            : takeNote.desc}
-        </p>
+          <p>
+            {takeNote.desc.length > 20
+              ? `${takeNote.desc.slice(0, 20)}...`
+              : takeNote.desc}
+          </p>
+        </div>
       </li>
     </Link>
   );

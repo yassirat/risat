@@ -25,15 +25,15 @@ const FooterLang = () => {
     <div className="relative">
       <button
         type="button"
-        className={`flex animate-fadeIn items-center gap-1 rounded px-1 py-1 text-xs font-medium italic transition-all duration-300 ease-in-out`}
+        className="flex animate-fadeIn items-center rounded px-1 py-1 text-xs font-medium italic transition-all duration-300 ease-in-out"
         title={t("footer.lang")}
         ref={buttonRef}
         onClick={() => handleClickOutside()}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -56,7 +56,7 @@ const FooterLang = () => {
           viewBox="0 0 24 24"
           strokeWidth={2.5}
           stroke="currentColor"
-          className={`size-3 transition-all duration-300 ease-in-out ${hover ? "rotate-180" : ""}`}
+          className={`size-3 transition-transform duration-300 ease-in-out ${hover ? "rotate-180" : ""}`}
         >
           <path
             strokeLinecap="round"
@@ -70,7 +70,7 @@ const FooterLang = () => {
         {hover && (
           <motion.div
             ref={menuRef}
-            className="absolute right-0 top-10 z-10 grid origin-top-right place-content-center gap-4 rounded bg-neutral-200/75 p-4 text-black shadow-dark backdrop-blur dark:shadow-lightWhite"
+            className="absolute right-0 top-10 z-10 grid origin-top-right place-content-center gap-4 rounded-lg bg-neutral-300/85 p-4 text-black shadow-dark backdrop-blur dark:shadow-lightWhite"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
@@ -79,11 +79,15 @@ const FooterLang = () => {
             {langBtns.map((btn) => (
               <button
                 key={btn.id}
-                className="flex w-32 items-center justify-center gap-1 text-nowrap rounded bg-neutral-100 px-3 py-2 text-sm font-medium text-black-500 transition-colors duration-300 ease-in-out hover:bg-black-100 hover:text-light focus:bg-black-500 focus:text-light dark:bg-neutral-300 dark:hover:bg-black-100 lg:gap-2"
+                className="flex w-24 items-center justify-center gap-1 text-nowrap rounded bg-neutral-100 px-2 py-1 text-xs font-medium text-black-500 transition-colors duration-300 ease-in-out hover:bg-black-100 hover:text-light focus:bg-black-500 focus:text-light dark:bg-neutral-300 dark:hover:bg-black-100 lg:gap-2"
                 onClick={() => changeLang(btn.value)}
               >
                 {btn.lang}
-                <img src={btn.img} alt={btn.img} className="w-7 object-cover" />
+                <img
+                  src={btn.img}
+                  alt={btn.lang}
+                  className="w-6 object-cover"
+                />
               </button>
             ))}
           </motion.div>
