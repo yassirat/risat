@@ -19,7 +19,7 @@ const Home = () => {
             </p>
           </div>
           <Link
-            to="/dashboard"
+            to="/"
             className="rounded-md bg-indigo-700 px-6 py-2 text-center text-xs font-medium tracking-wide text-light transition-colors duration-300 ease-in-out hover:bg-indigo-600"
           >
             {t("hero.btn")}

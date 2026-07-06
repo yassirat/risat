@@ -64,7 +64,7 @@ function Expense() {
       {/* Navbar */}
       <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 px-4 py-3 font-Fancy text-light">
         <nav className="mx-auto max-w-3xl">
-          <Link to="/dashboard" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

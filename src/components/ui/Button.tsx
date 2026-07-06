@@ -11,7 +11,7 @@ const Button = () => {
         aria-label="return to dashbord"
       >
         <Link
-          to="/dashboard"
+          to="/"
           className="flex items-center gap-2 rounded-md bg-black-500 px-4 py-2 text-[12px] font-medium text-light transition-colors duration-300 ease-in-out hover:bg-gray-700 dark:bg-light dark:text-black-500 dark:hover:bg-gray-300"
         >
           <svg
