@@ -50,7 +50,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
         </span>
         <label
           htmlFor={task.id}
-          className={`flex cursor-pointer items-center gap-2 text-sm ${done ? "text-neutral-500 line-through dark:text-neutral-400" : ""}`}
+          className={`flex cursor-pointer items-center gap-2 text-sm ${done ? "text-neutral-500 line-through" : ""}`}
         >
           <input
             type="checkbox"
@@ -59,11 +59,11 @@ const TodoItem = ({ task }: { task: TaskType }) => {
             id={task.id}
             className="peer hidden"
           />
-          <div className="flex size-4 rounded-md border border-[#a2a1a833] bg-[#e8e8e8] transition peer-checked:bg-[#7152f3] dark:bg-[#212121]">
+          <div className="flex size-4 rounded-full border border-[#a2a1a833] bg-zinc-200 transition peer-checked:bg-[#7152f3] dark:bg-zinc-900">
             <svg
               fill="none"
               viewBox="0 0 24 24"
-              className="size-4 stroke-[#e8e8e8] dark:stroke-[#212121]"
+              className="size-4 stroke-zinc-200 dark:stroke-zinc-900"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
