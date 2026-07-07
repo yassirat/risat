@@ -40,7 +40,7 @@ export default {
       },
       boxShadow: {
         dark: "rgba(100, 100, 111, 0.2) 0px 5px 24px 0px;",
-        lightWhite: "rgba(255, 255, 255, 0.1) 0px 5px 24px 0px;",
+        lightWhite: "rgba(255, 255, 255, 0.2) 0px 5px 24px 0px;",
       },
     },
   },
