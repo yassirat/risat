@@ -31,12 +31,12 @@ const Dashbord = () => {
   // container z-20 mx-auto grid min-h-dvh animate-fadeIn place-content-center gap-6 px-8 lg:place-items-center
 
   return (
-    <main className="z-10 grid place-content-center dark:bg-zinc-950">
-      <section className="mx-auto grid w-full max-w-4xl animate-fadeIn place-content-center place-items-center gap-8 px-8 py-4 dark:text-light lg:grid-cols-2 lg:gap-12 lg:px-0 lg:py-0">
+    <main className="z-10 my-20 grid place-content-center">
+      <section className="mx-auto grid h-full w-full max-w-4xl animate-fadeIn place-content-center place-items-center gap-8 px-8 py-4 dark:text-light lg:grid-cols-2 lg:gap-12 lg:px-0 lg:py-0">
         {tools.map((tool) => {
           return (
             <div
-              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark dark:shadow-lightWhite"
+              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark dark:bg-zinc-950 dark:shadow-lightWhite"
               key={tool.id}
             >
               <img
@@ -45,7 +45,7 @@ const Dashbord = () => {
                 className="w-1/2 object-cover"
               />
               <div className="grid w-1/2 place-items-center gap-2 px-2">
-                <h2 className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-xl font-bold text-transparent dark:from-neutral-200 dark:to-neutral-400 lg:text-2xl">
+                <h2 className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-xl font-bold text-transparent dark:from-neutral-300 dark:to-neutral-200 lg:text-2xl">
                   {tool.title}
                 </h2>
 
