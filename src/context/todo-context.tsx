@@ -29,7 +29,7 @@ interface TodoTypes {
   closeEditForm(): void;
 }
 
-export const TodoContext = createContext<TodoTypes>({
+export const TodoContext = createContext<TodoTypes | undefined>({
   text: [],
   editedText: null,
   isEdited: false,
@@ -53,6 +53,7 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const [isEdited, setIsEdited] = useState(false);
   //Edit Todo:
   const [editedText, setEditedText] = useState<TaskType | null>(null);
+  // Completed todos:
 
   const addText = (task: TaskType) => {
     setText((prevTask) => [...prevTask, task]);
