@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { NoteProps } from "../../context/Note";
+import { NoteProps } from "../../context/note-context";
 
 const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
   return (
