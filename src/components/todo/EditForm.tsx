@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { TodoContext } from "../../context/Todo";
+import { TodoContext } from "../../context/todo-context";
 
 const EditForm = () => {
   const { modifyEdit, editedText, closeEditForm } = useContext(TodoContext);

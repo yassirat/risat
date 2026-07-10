@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { TodoContext } from "../../context/Todo";
+import { useTodos } from "../../hooks/useTodos";
 
 const TodoForm = ({ showForm }: { showForm: () => void }) => {
   const { t } = useTranslation("global");
 
-  const { addText } = useContext(TodoContext);
+  const { addText } = useTodos();
 
   const [todo, setTodo] = useState("");
 

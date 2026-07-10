@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TodoContext } from "../../context/Todo";
+import { useTodos } from "../../hooks/useTodos";
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const { text } = useContext(TodoContext);
+  const { text } = useTodos();
 
   return (
     <ul className="grid gap-1 dark:text-light lg:gap-3">
