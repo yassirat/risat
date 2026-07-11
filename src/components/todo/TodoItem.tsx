@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { TaskType } from "../../context/todo-context";
 import { useTodos } from "../../hooks/useTodos";
@@ -6,10 +5,7 @@ import { useTodos } from "../../hooks/useTodos";
 const TodoItem = ({ task }: { task: TaskType }) => {
   const { updateText, showEditForm, deleteText } = useTodos();
 
-  const [done, setDone] = useState(task.checked);
-
   const isComplete = () => {
-    setDone(!done);
     updateText(task.id);
   };
 
@@ -51,11 +47,12 @@ const TodoItem = ({ task }: { task: TaskType }) => {
         </span>
         <label
           htmlFor={task.id}
-          className={`flex cursor-pointer items-center gap-2 text-sm ${done ? "text-neutral-500 line-through" : ""}`}
+          className={`flex cursor-pointer items-center gap-2 text-sm ${task.checked ? "text-neutral-500 line-through" : ""}`}
         >
           <input
             type="checkbox"
             onChange={isComplete}
+            checked={task.checked}
             name={task.name}
             id={task.id}
             className="peer hidden"
