@@ -12,6 +12,8 @@ export const Route = createFileRoute("/todo")({
 });
 
 function Todo() {
+  document.title = "risat | Todo";
+
   const { text, isEdited } = useTodos();
 
   // show form

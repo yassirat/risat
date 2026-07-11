@@ -11,6 +11,8 @@ export const Route = createFileRoute("/pass-generate")({
 });
 
 function Password() {
+  document.title = "risat | Password manager";
+
   const { t } = useTranslation("global");
 
   const [val, setVal] = useForm({
