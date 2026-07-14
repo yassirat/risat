@@ -61,7 +61,7 @@ createRoot(document.getElementById("root")!).render(
             <NoteProvider>
               <App />
             </NoteProvider>
-            <Toaster richColors position="bottom-right" />
+            <Toaster richColors position="bottom-right" closeButton />
           </TodoContextProvider>
         </LangProvider>
       </ThemeProvider>
