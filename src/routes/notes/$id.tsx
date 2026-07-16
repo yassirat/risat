@@ -116,7 +116,7 @@ function NoteContent() {
         </nav>
       </header>
 
-      <section className="mx-auto grid max-w-lg gap-4 px-4 pt-4" key={id}>
+      <section className="mx-auto grid max-w-lg gap-4 px-6 pt-4" key={id}>
         <div className="flex items-center justify-center">
           <p className="text-xs font-medium text-gray-500 dark:text-gray-500">
             {note.updatedAt
