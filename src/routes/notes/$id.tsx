@@ -37,32 +37,24 @@ function NoteContent() {
   return (
     <article className="min-h-dvh w-full dark:bg-zinc-950">
       {/* Navbar */}
-      <header className="px-2 py-4 dark:text-neutral-50">
+      <header className="p-4 dark:text-neutral-50">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
-          <Link to="/notes" className="flex items-center gap-3">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="size-5"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-move-left-icon lucide-move-left"
             >
-              <g clipPath="url(#a)">
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.25-7.25a.75.75 0 0 0 0-1.5H8.66l2.1-1.95a.75.75 0 1 0-1.02-1.1l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 0 0 1.02-1.1l-2.1-1.95h4.59Z"
-                  clipRule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="a">
-                  <path d="M0 0h20v20H0z" />
-                </clipPath>
-              </defs>
+              <path d="M6 8L2 12L6 16" />
+              <path d="M2 12H22" />
             </svg>
-
-            <h3 className="font-Fancy font-semibold tracking-wide md:tracking-wider">
-              {note.title}
-            </h3>
           </Link>
 
           {/* Buttons */}
@@ -77,17 +69,18 @@ function NoteContent() {
               <span className="hidden text-sm font-medium md:block">Edit</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                strokeWidth={2.5}
+                fill="none"
                 stroke="currentColor"
-                className="size-4"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-square-pen-icon lucide-square-pen"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
-                />
+                <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
               </svg>
             </button>
             <button
@@ -102,24 +95,28 @@ function NoteContent() {
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                strokeWidth={2.5}
+                fill="none"
                 stroke="currentColor"
-                className="size-4"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-trash2-icon lucide-trash-2"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                />
+                <path d="M10 11v6" />
+                <path d="M14 11v6" />
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                <path d="M3 6h18" />
+                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
               </svg>
             </button>
           </div>
         </nav>
       </header>
 
-      <section className="mx-auto grid max-w-lg gap-4 px-4 pt-8" key={id}>
+      <section className="mx-auto grid max-w-lg gap-4 px-4 pt-4" key={id}>
         <div className="flex items-center justify-center">
           <p className="text-xs font-medium text-gray-500 dark:text-gray-500">
             {note.updatedAt
@@ -127,7 +124,7 @@ function NoteContent() {
               : new Date(note.createdAt).toLocaleString()}
           </p>
         </div>
-        <div className="grid gap-4">
+        <div className="grid gap-2">
           <h3 className="animate-fadeIn break-words rounded text-lg font-semibold first-letter:capitalize dark:text-white xl:text-xl">
             {note.title}
           </h3>

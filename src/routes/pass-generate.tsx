@@ -104,33 +104,24 @@ function Password() {
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
-      <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 px-4 py-3 font-Fancy text-light">
+      <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-4 font-Fancy text-light">
         <nav className="mx-auto max-w-3xl">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="size-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-move-left-icon lucide-move-left"
             >
-              <g clipPath="url(#a)">
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.25-7.25a.75.75 0 0 0 0-1.5H8.66l2.1-1.95a.75.75 0 1 0-1.02-1.1l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 0 0 1.02-1.1l-2.1-1.95h4.59Z"
-                  clipRule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="a">
-                  <path d="M0 0h20v20H0z" />
-                </clipPath>
-              </defs>
+              <path d="M6 8L2 12L6 16" />
+              <path d="M2 12H22" />
             </svg>
-            <div className="relative">
-              <h3 className="font-Fancy font-semibold tracking-wide transition-all duration-200 ease-in-out after:absolute after:-bottom-1 after:left-0 after:right-0 after:mx-auto after:h-1 after:w-0 after:rounded-md after:bg-white hover:after:w-16 md:tracking-wider">
-                {t("dashboard.pass")}
-              </h3>
-            </div>
           </Link>
         </nav>
       </header>
