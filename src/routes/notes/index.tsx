@@ -14,7 +14,7 @@ function Notes() {
   document.title = "risat | Notes";
 
   // form
-  const { notes, deleteAll } = useNotes();
+  const { notes } = useNotes();
   // show form
   const [show, setShow] = useState(false);
   const showForm = () => {
@@ -49,7 +49,7 @@ function Notes() {
       </header>
 
       <main className="dark:bg-zinc-950">
-        <section className="mx-auto w-full max-w-2xl px-4 pt-6">
+        <section className="mx-auto w-full max-w-2xl px-6 pt-6">
           {show && <NoteForm showForm={showForm} />}
           <div className="pointer-events-none fixed bottom-12 left-0 right-0 flex justify-center">
             <div className="pointer-events-auto flex w-full max-w-xl justify-end pr-6">
@@ -78,34 +78,7 @@ function Notes() {
               </button>
             </div>
           </div>
-          {notes.length != 0 ? (
-            <>
-              <button
-                type="button"
-                onClick={deleteAll}
-                title={t("dashbord.deleteAll")}
-                className="mb-4 ml-auto flex items-center gap-1 rounded bg-red-700 px-3 py-1 text-xs text-light transition-colors duration-200 ease-in-out hover:bg-red-600"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-trash-icon lucide-trash"
-                >
-                  <path d="M3 6h18" />
-                  <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-                  <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
-                </svg>
-                <span>({notes.length})</span>
-              </button>
-            </>
-          ) : (
+          {notes.length == 0 && (
             <p className="animate-fadeIn pt-24 text-center font-medium dark:text-light">
               {t("Note.no_note")}
             </p>
