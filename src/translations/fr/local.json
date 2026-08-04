@@ -46,6 +46,7 @@
     "note": "Notes",
     "expense": "Liste des Achats",
     "pass": "Générateur Mot de Passe",
+    "qr": "Générateur de QR",
     "btn": "Retour au Tableau de bord",
     "title": "Tableau de bord",
     "deleteAll": "Supprimer tous"

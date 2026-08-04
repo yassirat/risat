@@ -46,6 +46,7 @@
     "note": "Notes",
     "expense": "Grocery List",
     "pass": "Password Generator",
+    "qr": "QR Generator",
     "btn": "Return to Dashboard",
     "title": "Dashboard",
     "deleteAll": "Delete All"
