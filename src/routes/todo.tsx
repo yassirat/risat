@@ -12,7 +12,7 @@ export const Route = createFileRoute("/todo")({
 });
 
 function Todo() {
-  document.title = "risat | Todo";
+  document.title = "Risat | Todo";
 
   const { text, isEdited } = useTodos();
 

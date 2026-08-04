@@ -11,7 +11,7 @@ export const Route = createFileRoute("/pass-generate")({
 });
 
 function Password() {
-  document.title = "risat | Password manager";
+  document.title = "Risat | Password manager";
 
   const { t } = useTranslation("global");
 
@@ -64,9 +64,9 @@ function Password() {
   const copyBtn = async () => {
     if (result) {
       await navigator.clipboard.writeText(result);
-      toast.success(`${t("password.success")}`);
+      toast.success(`${t(`password.success`)}`);
     } else {
-      toast.error(`${t("password.error")}`);
+      toast.error(`${t(`password.error`)}`);
     }
   };
 
@@ -75,28 +75,28 @@ function Password() {
       id: 1,
       name: "capital",
       htmlId: "capital",
-      label: `${t("password.capital")}`,
+      label: `${t(`password.capital`)}`,
       value: val.capital,
     },
     {
       id: 2,
       name: "small",
       htmlId: "small",
-      label: `${t("password.lower")}`,
+      label: `${t(`password.lower`)}`,
       value: val.small,
     },
     {
       id: 3,
       name: "number",
       htmlId: "number",
-      label: `${t("password.number")}`,
+      label: `${t(`password.number`)}`,
       value: val.number,
     },
     {
       id: 4,
       name: "symbol",
       htmlId: "symbol",
-      label: `${t("password.symbol")}`,
+      label: `${t(`password.symbol`)}`,
       value: val.symbol,
     },
   ];
