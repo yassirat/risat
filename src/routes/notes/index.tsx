@@ -11,7 +11,7 @@ export const Route = createFileRoute("/notes/")({
 });
 
 function Notes() {
-  document.title = "risat | Notes";
+  document.title = "Risat | Notes";
 
   // form
   const { notes } = useNotes();
