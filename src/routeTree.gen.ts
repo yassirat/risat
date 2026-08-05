@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TodoRouteImport } from './routes/todo'
+import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PassGenerateRouteImport } from './routes/pass-generate'
 import { Route as ExpenseRouteImport } from './routes/expense'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -21,6 +22,11 @@ import { Route as NotesIdRouteImport } from './routes/notes/$id'
 const TodoRoute = TodoRouteImport.update({
   id: '/todo',
   path: '/todo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QrGeneratorRoute = QrGeneratorRouteImport.update({
+  id: '/qr-generator',
+  path: '/qr-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PassGenerateRoute = PassGenerateRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/todo': typeof TodoRoute
   '/notes/$id': typeof NotesIdRoute
   '/notes/': typeof NotesIndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/todo': typeof TodoRoute
   '/notes/$id': typeof NotesIdRoute
   '/notes': typeof NotesIndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/expense': typeof ExpenseRoute
   '/pass-generate': typeof PassGenerateRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/todo': typeof TodoRoute
   '/notes/$id': typeof NotesIdRoute
   '/notes/': typeof NotesIndexRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/expense'
     | '/pass-generate'
+    | '/qr-generator'
     | '/todo'
     | '/notes/$id'
     | '/notes/'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/expense'
     | '/pass-generate'
+    | '/qr-generator'
     | '/todo'
     | '/notes/$id'
     | '/notes'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/expense'
     | '/pass-generate'
+    | '/qr-generator'
     | '/todo'
     | '/notes/$id'
     | '/notes/'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ExpenseRoute: typeof ExpenseRoute
   PassGenerateRoute: typeof PassGenerateRoute
+  QrGeneratorRoute: typeof QrGeneratorRoute
   TodoRoute: typeof TodoRoute
   NotesIdRoute: typeof NotesIdRoute
   NotesIndexRoute: typeof NotesIndexRoute
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/todo'
       fullPath: '/todo'
       preLoaderRoute: typeof TodoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qr-generator': {
+      id: '/qr-generator'
+      path: '/qr-generator'
+      fullPath: '/qr-generator'
+      preLoaderRoute: typeof QrGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pass-generate': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ExpenseRoute: ExpenseRoute,
   PassGenerateRoute: PassGenerateRoute,
+  QrGeneratorRoute: QrGeneratorRoute,
   TodoRoute: TodoRoute,
   NotesIdRoute: NotesIdRoute,
   NotesIndexRoute: NotesIndexRoute,
