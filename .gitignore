@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo
+pnpm-workspace.yaml
+
 
 node_modules
 dist
