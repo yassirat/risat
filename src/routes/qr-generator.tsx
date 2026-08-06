@@ -10,7 +10,7 @@ function QrGenerator() {
   const [src, setSrc] = useState("");
 
   const generateQr = () => {
-    const imgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example`;
+    const imgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${url}`;
     setSrc(imgUrl);
   };
 
