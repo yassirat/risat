@@ -50,7 +50,7 @@ const Dashbord = () => {
                 src={tool.img}
                 alt={tool.img}
                 loading="lazy"
-                className="h-32 w-1/2 object-cover"
+                className="h-24 w-1/2 object-cover lg:h-32"
               />
               <div className="grid w-1/2 place-items-center gap-2 px-2">
                 <Link
@@ -59,27 +59,6 @@ const Dashbord = () => {
                 >
                   {tool.title}
                 </Link>
-
-                {/* <Link
-                  className="group flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors duration-200 ease-in-out hover:text-blue-600 lg:text-base"
-                  to={tool.href}
-                >
-                  {t("dashboard.link")}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2.5}
-                    stroke="currentColor"
-                    className="size-4 transition duration-200 group-hover:translate-x-1"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Link> */}
               </div>
             </div>
           );
