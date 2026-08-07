@@ -1,6 +1,6 @@
 ## Risat
 
-![image alt](./screenshot-01.png)
+![image alt](./screenshot-02.jpg)
 
 Risat is my personal project, it's a website containing some different tools that we use every day. Tools such as todo list, notes and a password generator.
 
