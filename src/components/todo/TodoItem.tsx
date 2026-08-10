@@ -76,7 +76,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
           {task.name}
         </label>
       </div>
-      <div className="flex items-center gap-2 text-light">
+      <div className="flex items-center gap-1 pl-2 text-light">
         <button
           type="button"
           className="rounded bg-green-700 p-1 transition-colors duration-200 ease-in-out hover:bg-green-600"
