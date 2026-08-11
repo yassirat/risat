@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { TaskType } from "../../context/todo-context";
 import { useTodos } from "../../hooks/useTodos";
 
 const TodoItem = ({ task }: { task: TaskType }) => {
-  const { updateText, showEditForm, deleteText, showButtons, showBtns } =
-    useTodos();
+  const { updateText, showEditForm, deleteText } = useTodos();
 
   const isComplete = () => {
     updateText(task.id);
@@ -41,10 +41,12 @@ const TodoItem = ({ task }: { task: TaskType }) => {
     return date.toLocaleDateString();
   };
 
+  const [showBtns, setShowBtns] = useState(false);
+
   const copyBtn = async () => {
     if (task) {
       await navigator.clipboard.writeText(task.name);
-      showButtons();
+      setShowBtns(!showBtns);
     }
   };
 
@@ -86,7 +88,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
         </label>
       </div>
 
-      <button type="button" onClick={showButtons}>
+      <button type="button" onClick={() => setShowBtns(!showBtns)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -105,7 +107,7 @@ const TodoItem = ({ task }: { task: TaskType }) => {
       <AnimatePresence mode="wait">
         {showBtns && (
           <motion.div
-            className="absolute right-4 top-16 z-10 flex origin-top-right flex-col gap-2 rounded bg-gray-300/75 p-4 text-light backdrop-blur-sm"
+            className="absolute right-4 top-16 z-10 flex origin-top-right flex-col gap-2 rounded bg-gray-300 p-4 text-light"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
