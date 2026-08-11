@@ -20,6 +20,7 @@ interface TodoTypes {
   text: TaskType[];
   editedText: TaskType | null;
   isEdited: boolean;
+  showBtns: boolean;
   addText(task: TaskType): void;
   deleteText(id: string): void;
   updateText(id: string): void;
@@ -27,12 +28,14 @@ interface TodoTypes {
   modifyEdit(task: TaskType): void;
   showEditForm(task: SetStateAction<TaskType | null>): void;
   closeEditForm(): void;
+  showButtons(): void;
 }
 
 export const TodoContext = createContext<TodoTypes | undefined>({
   text: [],
   editedText: null,
   isEdited: false,
+  showBtns: false,
   addText() {},
   deleteText() {},
   updateText() {},
@@ -40,6 +43,7 @@ export const TodoContext = createContext<TodoTypes | undefined>({
   modifyEdit() {},
   showEditForm() {},
   closeEditForm() {},
+  showButtons() {},
 });
 
 export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
@@ -55,6 +59,8 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const [editedText, setEditedText] = useState<TaskType | null>(null);
   // Completed todos:
 
+  const [showBtns, setShowBtns] = useState(false);
+
   const addText = (task: TaskType) => {
     setText((prevTask) => [...prevTask, task]);
     toast.success(t("TODO.toast"));
@@ -63,6 +69,7 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const deleteText = (id: string) => {
     setText((prevTask) => prevTask.filter((t: { id: string }) => t.id !== id));
     toast.success(t("TODO.toast_delete"));
+    setShowBtns(!showBtns);
   };
 
   const deleteAll = () => {
@@ -74,6 +81,7 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
     setText((prevTask) =>
       prevTask.map((t) => (t.id === id ? { ...t, checked: !t.checked } : t)),
     );
+    setShowBtns(true);
   };
 
   const modifyEdit = (task: TaskType) => {
@@ -91,6 +99,11 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const showEditForm = (task: SetStateAction<TaskType | null>) => {
     setEditedText(task);
     setIsEdited(true);
+    setShowBtns(!showBtns);
+  };
+
+  const showButtons = () => {
+    setShowBtns(!showBtns);
   };
 
   useEffect(() => {
@@ -110,6 +123,8 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
         closeEditForm,
         isEdited,
         editedText,
+        showBtns,
+        showButtons,
       }}
     >
       {children}
