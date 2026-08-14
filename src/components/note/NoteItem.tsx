@@ -22,7 +22,7 @@ const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
           <span> </span>
           <p>
             {takeNote.desc.length > 20
-              ? `${takeNote.desc.slice(0, 20)}...`
+              ? `${takeNote.desc.slice(0, 25)}...`
               : takeNote.desc}
           </p>
         </div>
