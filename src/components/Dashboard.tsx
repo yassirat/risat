@@ -42,9 +42,10 @@ const Dashbord = () => {
       <section className="mx-auto grid h-full w-full max-w-3xl animate-fadeIn place-content-center place-items-center gap-8 px-8 py-4 dark:text-light lg:grid-cols-2 lg:gap-12 lg:px-0 lg:py-0">
         {tools.map((tool) => {
           return (
-            <div
-              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark transition hover:scale-105 dark:bg-zinc-950 dark:shadow-lightWhite"
+            <Link
               key={tool.id}
+              to={tool.href}
+              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark transition hover:scale-105 dark:bg-zinc-950 dark:shadow-lightWhite"
             >
               <img
                 src={tool.img}
@@ -53,14 +54,11 @@ const Dashbord = () => {
                 className="h-24 w-1/2 object-cover lg:h-32"
               />
               <div className="grid w-1/2 place-items-center gap-2 px-2">
-                <Link
-                  to={tool.href}
-                  className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-lg font-bold text-transparent hover:underline dark:from-neutral-300 dark:to-neutral-200 md:text-xl lg:text-2xl"
-                >
+                <h2 className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-lg font-bold text-transparent dark:from-neutral-300 dark:to-neutral-200 md:text-xl lg:text-2xl">
                   {tool.title}
-                </Link>
+                </h2>
               </div>
-            </div>
+            </Link>
           );
         })}
       </section>
