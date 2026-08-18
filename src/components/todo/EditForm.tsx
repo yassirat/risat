@@ -19,7 +19,7 @@ const EditForm = () => {
     <main className="absolute left-0 top-0 z-50 flex min-h-dvh w-full items-center justify-center px-8 backdrop-blur">
       <button
         type="button"
-        className="absolute right-4 top-48 rounded-full bg-slate-900 p-1 transition duration-200 ease-in-out hover:bg-slate-800 lg:right-72 lg:p-2"
+        className="absolute right-72 top-64 rounded-full bg-slate-900 p-1 transition duration-200 ease-in-out hover:bg-slate-700"
         onClick={closeEditForm}
       >
         <svg
@@ -33,11 +33,11 @@ const EditForm = () => {
       </button>
       <form
         onSubmit={formSubmit}
-        className="mx-auto flex flex-1 items-center justify-center gap-2 backdrop-blur-xl lg:max-w-xl"
+        className="mx-auto flex max-w-lg flex-1 items-center justify-center gap-2 backdrop-blur-xl"
       >
         <input
           type="text"
-          className="w-full rounded bg-slate-950 px-2 py-1 text-sm font-medium text-white shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none lg:px-3 lg:py-2"
+          className="w-3/4 rounded bg-light px-2 py-1 text-sm font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light"
           placeholder={t("TODO.todo_modify")}
           value={editTodo}
           onChange={(e) => setEditTodo(e.target.value)}
@@ -45,7 +45,7 @@ const EditForm = () => {
           required
         />
         <button
-          className="rounded bg-blue-700 p-1 text-light transition-colors duration-200 ease-in-out hover:bg-blue-600 lg:p-2"
+          className="rounded bg-blue-700 p-1 text-light transition-colors duration-200 ease-in-out hover:bg-blue-600"
           type="submit"
           aria-label="edit todo"
         >
@@ -53,7 +53,7 @@ const EditForm = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-5 lg:size-6"
+            className="size-5"
           >
             <path
               fillRule="evenodd"
