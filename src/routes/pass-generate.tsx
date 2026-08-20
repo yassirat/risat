@@ -135,7 +135,7 @@ function Password() {
             type="text"
             value={result}
             readOnly
-            className="w-full rounded-sm border border-solid border-slate-900 bg-transparent px-2 py-1 text-sm font-medium tracking-wider text-black-500 focus:outline-none dark:border-light dark:text-light md:text-base"
+            className="w-full rounded bg-transparent px-2 py-1 text-sm font-medium tracking-wider text-black-500 shadow-[0_0_2px] shadow-slate-400 focus:outline-none dark:text-light md:text-base"
           />
           <div className="flex items-center justify-center gap-4">
             <p className="font-mono font-semibold capitalize text-gray-700 dark:text-gray-400">
@@ -150,7 +150,7 @@ function Password() {
               name="length"
               value={val.length}
               onChange={setVal}
-              className="w-16 rounded-md border border-solid border-slate-900 bg-transparent px-2 py-1 text-sm font-medium tracking-wider text-black-500 focus:outline-none dark:border-light dark:text-light"
+              className="w-16 rounded-md bg-transparent px-2 py-1 text-sm font-medium tracking-wider text-black-500 shadow-[0_0_2px] shadow-zinc-900 focus:outline-none dark:text-light"
             />
           </div>
           <div className="grid gap-4">
