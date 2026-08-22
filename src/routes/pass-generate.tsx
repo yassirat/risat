@@ -129,7 +129,7 @@ function Password() {
       <main className="flex items-center justify-center bg-white dark:bg-black-500">
         <form
           onSubmit={sumbitForm}
-          className="container grid w-full animate-fadeIn gap-6 px-8 lg:w-2/5"
+          className="container grid w-full animate-fadeIn gap-6 px-4 lg:w-2/5"
         >
           <input
             type="text"

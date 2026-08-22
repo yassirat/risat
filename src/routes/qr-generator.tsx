@@ -46,10 +46,9 @@ function QrGenerator() {
           <div className="grid place-items-center gap-4">
             <input
               type="text"
-              name=""
-              id=""
               placeholder="Enter a link"
-              className="w-3/4 rounded bg-light px-2 py-1 font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light"
+              aria-label="Enter a link"
+              className="w-full rounded bg-light px-2 py-1 font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light lg:w-2/5"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               autoFocus
