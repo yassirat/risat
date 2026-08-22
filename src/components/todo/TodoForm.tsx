@@ -26,7 +26,7 @@ const TodoForm = ({ showForm }: { showForm: () => void }) => {
     <main className="absolute left-0 top-0 z-50 flex min-h-dvh w-full items-center justify-center px-8 backdrop-blur-sm">
       <button
         type="button"
-        className="absolute right-72 top-64 animate-fadeIn rounded-full bg-slate-900 p-1 transition duration-200 ease-in-out hover:bg-slate-700"
+        className="absolute right-8 top-60 animate-fadeIn rounded-full bg-slate-900 p-1 transition duration-200 ease-in-out hover:bg-slate-700 lg:right-72"
         onClick={showForm}
       >
         <svg
