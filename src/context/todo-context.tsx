@@ -1,5 +1,6 @@
 import {
   createContext,
+  Dispatch,
   ReactNode,
   SetStateAction,
   useEffect,
@@ -20,6 +21,8 @@ interface TodoTypes {
   text: TaskType[];
   editedText: TaskType | null;
   isEdited: boolean;
+  showBtns: string | null;
+  setShowBtns: Dispatch<SetStateAction<string | null>>;
   addText(task: TaskType): void;
   deleteText(id: string): void;
   updateText(id: string): void;
@@ -29,18 +32,7 @@ interface TodoTypes {
   closeEditForm(): void;
 }
 
-export const TodoContext = createContext<TodoTypes | undefined>({
-  text: [],
-  editedText: null,
-  isEdited: false,
-  addText() {},
-  deleteText() {},
-  updateText() {},
-  deleteAll() {},
-  modifyEdit() {},
-  showEditForm() {},
-  closeEditForm() {},
-});
+export const TodoContext = createContext<TodoTypes | undefined>(undefined);
 
 export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const { t } = useTranslation("global");
@@ -54,6 +46,8 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   //Edit Todo:
   const [editedText, setEditedText] = useState<TaskType | null>(null);
   // Completed todos:
+
+  const [showBtns, setShowBtns] = useState<string | null>(null);
 
   const addText = (task: TaskType) => {
     setText((prevTask) => [...prevTask, task]);
@@ -84,13 +78,13 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
     toast.success(t("TODO.toast_edit"));
   };
 
-  const closeEditForm = () => {
-    setIsEdited(false);
-  };
-
   const showEditForm = (task: SetStateAction<TaskType | null>) => {
     setEditedText(task);
     setIsEdited(true);
+    setShowBtns(null);
+  };
+  const closeEditForm = () => {
+    setIsEdited(false);
   };
 
   useEffect(() => {
@@ -110,6 +104,8 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
         closeEditForm,
         isEdited,
         editedText,
+        showBtns,
+        setShowBtns,
       }}
     >
       {children}
