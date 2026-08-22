@@ -49,7 +49,7 @@ function Notes() {
       </header>
 
       <main className="dark:bg-zinc-950">
-        <section className="mx-auto w-full max-w-2xl px-6 pt-6">
+        <section className="mx-auto w-full max-w-2xl px-4 pt-6">
           {show && <NoteForm showForm={showForm} />}
           <div className="pointer-events-none fixed bottom-12 left-0 right-0 flex justify-center">
             <div className="pointer-events-auto flex w-full max-w-xl justify-end pr-6">
