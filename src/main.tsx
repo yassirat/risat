@@ -8,10 +8,10 @@ import { Toaster } from "sonner";
 import enTranslation from "../src/translations/en/local.json";
 import frTranslation from "../src/translations/fr/local.json";
 import App from "./App.tsx";
-import { LangProvider } from "./context/LangSwitcher.tsx";
-import { NoteProvider } from "./context/note-context.tsx";
-import { ThemeProvider } from "./context/theme.tsx";
-import { TodoContextProvider } from "./context/todo-context.tsx";
+import { LangProvider } from "./context/language/lang-provider.tsx";
+import { NoteProvider } from "./context/note/note-provider.tsx";
+import { ThemeProvider } from "./context/theme/theme-provider.tsx";
+import { TodoContextProvider } from "./context/todo/todo-provider.tsx";
 import "./index.css";
 
 const resources = {
