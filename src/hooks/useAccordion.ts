@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AccordionContext } from "../context/AccordionContext";
+import { AccordionContext } from "../components/Accordion/AccordionContext";
 
 // Custom hook with error handling
 export function useAccordion() {
