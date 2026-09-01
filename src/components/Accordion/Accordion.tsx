@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { AccordionContext } from "../../context/AccordionContext";
 import { useAccordion } from "../../hooks/useAccordion";
+import { AccordionContext } from "./AccordionContext";
 
 type AccordionProps = {
   children: React.ReactNode;
