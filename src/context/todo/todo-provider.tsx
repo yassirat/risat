@@ -1,38 +1,7 @@
-import {
-  createContext,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useEffect,
-  useState,
-} from "react";
+import { ReactNode, SetStateAction, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-
-export type TaskType = {
-  name: string;
-  id: string;
-  checked: boolean;
-  time: number;
-  createdAt: string;
-};
-
-interface TodoTypes {
-  text: TaskType[];
-  editedText: TaskType | null;
-  isEdited: boolean;
-  showBtns: string | null;
-  setShowBtns: Dispatch<SetStateAction<string | null>>;
-  addText(task: TaskType): void;
-  deleteText(id: string): void;
-  updateText(id: string): void;
-  deleteAll(): void;
-  modifyEdit(task: TaskType): void;
-  showEditForm(task: SetStateAction<TaskType | null>): void;
-  closeEditForm(): void;
-}
-
-export const TodoContext = createContext<TodoTypes | undefined>(undefined);
+import { TaskType, TodoContext } from "./todo-context";
 
 export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
   const { t } = useTranslation("global");
@@ -68,6 +37,7 @@ export const TodoContextProvider = ({ children }: { children: ReactNode }) => {
     setText((prevTask) =>
       prevTask.map((t) => (t.id === id ? { ...t, checked: !t.checked } : t)),
     );
+    setShowBtns(null);
   };
 
   const modifyEdit = (task: TaskType) => {

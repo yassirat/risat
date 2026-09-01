@@ -1,38 +1,7 @@
-import {
-  createContext,
-  ReactNode,
-  SetStateAction,
-  useEffect,
-  useState,
-} from "react";
+import { ReactNode, SetStateAction, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-
-export type NoteProps = {
-  id: string;
-  title: string;
-  desc: string;
-  time: Date;
-  createdAt: string;
-  updatedAt: string;
-};
-interface NoteTypes {
-  notes: NoteProps[];
-  editedNote: NoteProps | null;
-  isEditedNote: boolean;
-  addNote(task: NoteProps): void;
-  deleteNote(id: string): void;
-  deleteAll(): void;
-  modifyEdit(task: {
-    title: string | undefined;
-    desc: string | undefined;
-  }): void;
-  closeEditForm(): void;
-  showEditForm(task: SetStateAction<NoteProps | null>): void;
-  getNoteById: (id: string) => NoteProps | undefined;
-}
-
-export const NoteContext = createContext<NoteTypes | undefined>(undefined);
+import { NoteContext, NoteProps } from "./note-context";
 
 export const NoteProvider = ({ children }: { children: ReactNode }) => {
   const { t } = useTranslation("global");

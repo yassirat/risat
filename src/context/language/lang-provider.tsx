@@ -1,27 +1,5 @@
-import {
-  createContext,
-  ReactNode,
-  RefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-
-interface LangProps {
-  hover: boolean;
-  setHover: (hover: boolean) => void;
-  handleClickOutside(): void;
-  buttonRef: RefObject<HTMLButtonElement>;
-  menuRef: RefObject<HTMLDivElement>;
-}
-
-export const LangContext = createContext<LangProps>({
-  hover: false,
-  setHover: () => {},
-  handleClickOutside() {},
-  buttonRef: { current: null },
-  menuRef: { current: null },
-});
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { LangContext } from "./lang-context";
 
 export const LangProvider = ({ children }: { children: ReactNode }) => {
   const [hover, setHover] = useState(false);

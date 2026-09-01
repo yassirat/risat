@@ -1,13 +1,5 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-
-type Theme = "light" | "dark";
-
-interface ThemeProps {
-  toggleTheme(): void;
-  theme: Theme;
-}
-
-export const ThemeContext = createContext<ThemeProps | undefined>(undefined);
+import { ReactNode, useEffect, useState } from "react";
+import { Theme, ThemeContext } from "./theme-context";
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   // 2. Safe JSON parsing with try-catch
@@ -16,9 +8,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     if (!savedMode) return "light";
 
     try {
-      // If you previously saved it as a raw string (e.g., "dark"),
-      // JSON.parse might fail if it's not wrapped in quotes.
-      // If it fails, we assume it's a raw string.
       return JSON.parse(savedMode) as Theme;
     } catch (e) {
       return savedMode as Theme;
@@ -36,7 +25,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     localStorage.setItem("mode", JSON.stringify(theme));
 
-    // Apply theme to document for Tailwind 'dark:' selectors
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
