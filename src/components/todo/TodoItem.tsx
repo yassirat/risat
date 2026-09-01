@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { TaskType } from "../../context/todo-context";
+import { TaskType } from "../../context/todo/todo-context";
 import { useTodos } from "../../hooks/useTodos";
 
 const TodoItem = ({ task }: { task: TaskType }) => {
