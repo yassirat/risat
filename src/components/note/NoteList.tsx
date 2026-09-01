@@ -1,4 +1,4 @@
-import { NoteProps } from "../../context/note-context";
+import { NoteProps } from "../../context/note/note-context";
 import { useNotes } from "../../hooks/useNotes";
 import NoteItem from "./NoteItem";
 
