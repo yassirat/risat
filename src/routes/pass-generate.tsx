@@ -104,7 +104,7 @@ function Password() {
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
-      <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-4 font-Fancy text-light">
+      <header className="bg-neutral-100 p-4 dark:bg-neutral-950 dark:text-light">
         <nav className="mx-auto max-w-3xl">
           <Link to="/">
             <svg
@@ -126,7 +126,7 @@ function Password() {
         </nav>
       </header>
 
-      <main className="flex items-center justify-center bg-white dark:bg-black-500">
+      <main className="flex items-center justify-center bg-[#EFEEEA] dark:bg-[#121212]">
         <form
           onSubmit={sumbitForm}
           className="container grid w-full animate-fadeIn gap-6 px-4 lg:w-2/5"

@@ -19,7 +19,7 @@ function QrGenerator() {
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
-      <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-4 font-Fancy text-light">
+      <header className="bg-neutral-100 p-4 dark:bg-neutral-950 dark:text-light">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
           <Link to="/">
             <svg
@@ -41,14 +41,14 @@ function QrGenerator() {
         </nav>
       </header>
 
-      <main className="bg-white dark:bg-black-500">
-        <section className="mx-auto grid w-full max-w-2xl gap-16 px-4 pt-6">
+      <main className="bg-[#EFEEEA] dark:bg-[#121212]">
+        <section className="mx-auto grid w-full max-w-lg gap-16 px-4 pt-12">
           <div className="grid place-items-center gap-4">
             <input
               type="text"
               placeholder="Enter a link"
               aria-label="Enter a link"
-              className="w-full rounded bg-light px-2 py-1 font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light lg:w-2/5"
+              className="w-full rounded bg-light px-3 py-1 font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               autoFocus
