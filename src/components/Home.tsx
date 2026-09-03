@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative grid w-full place-content-center bg-light bg-dot-black/[0.3] dark:bg-zinc-950 dark:bg-dot-white/[0.25]">
+      <div className="relative grid w-full place-content-center bg-light bg-dot-black/[0.3] dark:bg-[#121212] dark:bg-dot-white/[0.25]">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-zinc-950"></div>
         <section className="container z-20 mx-auto grid min-h-dvh animate-fadeIn place-content-center gap-6 px-8 lg:place-items-center">
           <div>
