@@ -39,7 +39,7 @@ function NoteContent() {
       {/* Navbar */}
       <header className="p-4 dark:text-neutral-50">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
-          <Link to="/">
+          <Link to="/notes">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

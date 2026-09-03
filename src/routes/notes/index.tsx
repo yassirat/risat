@@ -26,7 +26,7 @@ function Notes() {
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
-      <header className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-4 font-Fancy text-light">
+      <header className="bg-neutral-100 p-4 dark:bg-neutral-950 dark:text-light">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
           <Link to="/">
             <svg
@@ -48,7 +48,7 @@ function Notes() {
         </nav>
       </header>
 
-      <main className="dark:bg-zinc-950">
+      <main className="bg-[#EFEEEA] dark:bg-[#121212]">
         <section className="mx-auto w-full max-w-2xl px-4 pt-6">
           {show && <NoteForm showForm={showForm} />}
           <div className="pointer-events-none fixed bottom-12 left-0 right-0 flex justify-center">
