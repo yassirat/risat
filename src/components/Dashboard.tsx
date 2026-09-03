@@ -45,7 +45,7 @@ const Dashbord = () => {
             <Link
               key={tool.id}
               to={tool.href}
-              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark transition hover:scale-105 dark:bg-zinc-950 dark:shadow-lightWhite"
+              className="animate-fadeLeft flex w-full items-center overflow-hidden rounded-xl bg-white shadow-dark transition hover:scale-105 dark:bg-zinc-950"
             >
               <img
                 src={tool.img}

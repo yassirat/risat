@@ -17,8 +17,11 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-4 z-50 w-full px-4 font-Fancy text-black-100 dark:text-light">
-      <nav className="mx-auto flex max-w-5xl animate-fadeIn items-center justify-between rounded-full bg-white/75 px-6 py-3 shadow-dark backdrop-blur dark:bg-black/75 dark:shadow-lightWhite">
-        <Link to="/" className="font-Fancy font-bold tracking-wide">
+      <nav className="mx-auto flex max-w-5xl animate-fadeIn items-center justify-between rounded-full bg-white/75 px-6 py-3 shadow-dark backdrop-blur dark:bg-black/75">
+        <Link
+          to="/"
+          className="font-Fancy text-lg font-extrabold tracking-wide"
+        >
           Risat.
         </Link>
 
