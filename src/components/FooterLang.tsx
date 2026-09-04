@@ -79,7 +79,7 @@ const FooterLang = () => {
             {langBtns.map((btn) => (
               <button
                 key={btn.id}
-                className="flex w-24 items-center justify-center gap-1 text-nowrap rounded bg-neutral-100 px-2 py-1 text-xs font-medium text-black-500 transition-colors duration-300 ease-in-out hover:bg-black-100 hover:text-light focus:bg-black-500 focus:text-light dark:bg-neutral-300 dark:hover:bg-black-100 lg:gap-2"
+                className="flex w-24 items-center justify-center gap-1 text-nowrap rounded bg-neutral-100 px-2 py-1 text-xs font-medium text-black-500 transition-colors duration-300 ease-in-out hover:bg-black-100 hover:text-light focus:bg-black-500 focus:text-light dark:bg-neutral-300 dark:hover:bg-black-100 md:text-sm lg:gap-2"
                 onClick={() => changeLang(btn.value)}
               >
                 {btn.lang}

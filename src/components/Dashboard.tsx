@@ -54,7 +54,7 @@ const Dashbord = () => {
                 className="h-24 w-1/2 object-cover lg:h-32"
               />
               <div className="grid w-1/2 place-items-center gap-2 px-2">
-                <h2 className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-lg font-bold text-transparent dark:from-neutral-300 dark:to-neutral-200 md:text-xl lg:text-2xl">
+                <h2 className="animate-fadeUp bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-center text-xl font-bold text-transparent dark:from-neutral-300 dark:to-neutral-200 md:text-2xl lg:text-3xl">
                   {tool.title}
                 </h2>
               </div>
