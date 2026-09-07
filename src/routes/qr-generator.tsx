@@ -19,7 +19,7 @@ function QrGenerator() {
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
-      <header className="bg-neutral-100 p-4 dark:bg-neutral-950 dark:text-light">
+      <header className="bg-[#EFEEEA] p-4 dark:bg-neutral-950 dark:text-light">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
           <Link to="/">
             <svg
@@ -41,7 +41,7 @@ function QrGenerator() {
         </nav>
       </header>
 
-      <main className="bg-[#EFEEEA] dark:bg-[#121212]">
+      <main className="bg-neutral-100 dark:bg-[#121212]">
         <section className="mx-auto grid w-full max-w-lg gap-16 px-4 pt-12">
           <div className="grid place-items-center gap-4">
             <input

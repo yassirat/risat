@@ -35,7 +35,7 @@ function NoteContent() {
   };
 
   return (
-    <article className="min-h-dvh w-full dark:bg-zinc-950">
+    <article className="min-h-dvh w-full bg-zinc-100 dark:bg-zinc-950">
       {/* Navbar */}
       <header className="p-4 dark:text-neutral-50">
         <nav className="mx-auto flex max-w-3xl items-center justify-between">
