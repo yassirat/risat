@@ -13,7 +13,7 @@ const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
         <h4 className="text-sm font-semibold first-letter:capitalize">
           {takeNote.title}
         </h4>
-        <div className="flex items-center gap-1 text-xs font-medium text-gray-600 dark:text-gray-400">
+        <div className="flex items-center gap-1 text-xs font-medium dark:text-gray-400">
           <span>
             {takeNote.updatedAt
               ? new Date(takeNote.updatedAt).toLocaleDateString()
