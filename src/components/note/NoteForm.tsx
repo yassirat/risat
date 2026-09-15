@@ -58,7 +58,7 @@ const NoteForm = ({ showForm }: { showForm: () => void }) => {
           rows={10}
           cols={30}
           placeholder={t("Note.note_desc")}
-          className="w-full rounded bg-light px-2 py-1 text-sm font-medium text-white shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light"
+          className="w-full rounded bg-light px-2 py-1 text-sm font-medium shadow-[0_0_2px] shadow-slate-400 transition-all duration-200 ease-in focus:shadow-[0_0_8px] focus:outline-none dark:bg-black-100 dark:text-light"
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
           required
