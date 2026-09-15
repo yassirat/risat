@@ -10,17 +10,17 @@ const NoteItem = ({ takeNote }: { takeNote: NoteProps }) => {
       params={{ id: takeNote.id }}
     >
       <li className="grid gap-1">
-        <h4 className="text-sm font-semibold first-letter:capitalize">
+        <h4 className="text-sm font-semibold first-letter:capitalize dark:text-light">
           {takeNote.title}
         </h4>
-        <div className="flex items-center gap-1 text-xs font-medium dark:text-gray-400">
+        <div className="flex items-center gap-1 text-xs font-medium">
           <span>
             {takeNote.updatedAt
               ? new Date(takeNote.updatedAt).toLocaleDateString()
               : new Date(takeNote.createdAt).toLocaleDateString()}
           </span>
           <span> </span>
-          <p>
+          <p className="dark:text-gray-400">
             {takeNote.desc.length > 20
               ? `${takeNote.desc.slice(0, 25)}...`
               : takeNote.desc}

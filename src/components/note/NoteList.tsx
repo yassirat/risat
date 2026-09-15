@@ -10,7 +10,7 @@ const NoteList = () => {
   };
 
   return (
-    <ul className="grid gap-4 dark:text-light lg:gap-5">
+    <ul className="grid gap-4 lg:gap-5">
       {notes
         .sort((a, b) => getLastModifiedDate(b) - getLastModifiedDate(a))
         .map((takeNote: NoteProps) => (
