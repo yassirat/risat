@@ -16,6 +16,46 @@ function QrGenerator() {
     setSrc(imgUrl);
   };
 
+  const getQrBlob = async () => {
+    const res = await fetch(src);
+    if (!res.ok) throw new Error("Failed to fetch QR code");
+    return res.blob();
+  };
+
+  const handleSave = async () => {
+    try {
+      const blob = await getQrBlob();
+      const blobUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = "qr-code.png";
+      link.click();
+
+      URL.revokeObjectURL(blobUrl);
+    } catch {
+      // CORS blocked or network error: open the image so the user can save it manually
+      window.open(src, "_blank");
+    }
+  };
+
+  const handleShare = async () => {
+    try {
+      const blob = await getQrBlob();
+      const file = new File([blob], "qr-code.png", {
+        type: blob.type || "image/png",
+      });
+
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({ files: [file], title: "My QR code" });
+      } else {
+        handleSave();
+      }
+    } catch {
+      // Share cancelled or failed
+    }
+  };
+
   return (
     <article className="grid min-h-dvh w-full grid-rows-[auto_1fr]">
       {/* Navbar */}
@@ -42,7 +82,7 @@ function QrGenerator() {
       </header>
 
       <main className="bg-neutral-100 dark:bg-[#121212]">
-        <section className="mx-auto grid w-full max-w-lg gap-16 px-4 pt-12">
+        <section className="mx-auto grid w-full max-w-lg gap-8 px-4 pt-12">
           <div className="grid place-items-center gap-4">
             <input
               type="text"
@@ -64,6 +104,24 @@ function QrGenerator() {
             </button>
           </div>
           <img src={src} className="mx-auto" />
+          {src && (
+            <div className="flex animate-fadeIn items-center justify-center gap-2">
+              <button
+                type="button"
+                className="rounded bg-indigo-700 px-3 py-1 text-sm text-light transition-colors duration-200 ease-in-out hover:bg-indigo-600"
+                onClick={handleSave}
+              >
+                Save
+              </button>
+              <button
+                type="button"
+                className="rounded border-2 border-indigo-700 px-3 py-1 text-sm transition-colors duration-200 ease-in-out hover:bg-indigo-600"
+                onClick={handleShare}
+              >
+                Share
+              </button>
+            </div>
+          )}
         </section>
       </main>
     </article>
