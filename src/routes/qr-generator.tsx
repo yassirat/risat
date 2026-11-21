@@ -95,7 +95,7 @@ function QrGenerator() {
               required
             />
             <button
-              className="rounded bg-blue-700 px-3 py-1 text-sm text-light transition-colors duration-200 ease-in-out hover:bg-blue-600"
+              className="rounded bg-blue-700 px-3 py-2 text-sm font-medium text-light transition-colors duration-200 ease-in-out hover:bg-blue-600"
               type="button"
               onClick={generateQr}
               aria-label="convert link to a qr code"

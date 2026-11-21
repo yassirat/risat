@@ -181,14 +181,14 @@ function Password() {
           <div className="flex w-full items-center justify-center gap-2">
             <button
               type="submit"
-              className="rounded bg-green-700 px-4 py-1 text-xs font-semibold capitalize tracking-wide text-light transition-colors duration-300 ease-in-out hover:bg-green-600 md:text-sm"
+              className="rounded bg-green-700 px-4 py-2 text-xs font-semibold capitalize tracking-wide text-light transition-colors duration-300 ease-in-out hover:bg-green-600 md:text-sm"
               aria-label="Generate Password"
             >
               {t("password.btn")}
             </button>
             <span
               onClick={copyBtn}
-              className="cursor-pointer rounded bg-rose-700 px-4 py-1 text-xs font-semibold capitalize tracking-wide text-neutral-100 transition-colors duration-300 ease-in-out hover:bg-rose-600 md:text-sm"
+              className="cursor-pointer rounded bg-rose-700 px-4 py-2 text-xs font-semibold capitalize tracking-wide text-neutral-100 transition-colors duration-300 ease-in-out hover:bg-rose-600 md:text-sm"
               aria-label="Copy Password"
             >
               {t("password.copy")}
